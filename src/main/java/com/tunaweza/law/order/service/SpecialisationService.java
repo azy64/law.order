@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service;
+package com.tunaweza.law.order.service;
 
-import Repository.SpecialisationRepository;
+import com.tunaweza.law.order.repository.SpecialisationRepository;
 import com.tunaweza.law.order.model.Specialisation;
 import java.util.List;
 import lombok.AllArgsConstructor;

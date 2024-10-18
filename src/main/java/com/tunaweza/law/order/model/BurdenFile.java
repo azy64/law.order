@@ -13,10 +13,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.util.Date;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import service.EntityModel;
+import com.tunaweza.law.order.service.EntityModel;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -26,7 +26,7 @@ import service.EntityModel;
 @Table(name="BurdenFile")
 @Getter
 @Setter
-@AllArgsConstructor
+@NoArgsConstructor
 public class BurdenFile implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

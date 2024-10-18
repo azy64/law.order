@@ -11,9 +11,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.util.Date;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-import service.EntityModel;
+import com.tunaweza.law.order.service.EntityModel;
+import lombok.NoArgsConstructor;
 
 /**
  *

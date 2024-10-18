@@ -13,10 +13,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.util.Date;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import service.EntityModel;
+import com.tunaweza.law.order.service.EntityModel;
+import lombok.NoArgsConstructor;
 
 
 /**
@@ -27,7 +27,7 @@ import service.EntityModel;
 @Table(name="Judge")
 @Getter
 @Setter
-@AllArgsConstructor
+@NoArgsConstructor
 public class Judge implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
