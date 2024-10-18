@@ -11,8 +11,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.util.Date;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.tunaweza.law.order.service.EntityModel;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -23,7 +24,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Specialisation {
+public class Specialisation implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long Id;

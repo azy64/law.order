@@ -13,10 +13,11 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.util.Date;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
+import com.tunaweza.law.order.service.EntityModel;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -26,8 +27,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name="Accuser")
 @Getter
 @Setter
-@AllArgsConstructor
-public class Accuser {
+@NoArgsConstructor
+public class Accuser implements EntityModel {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int Id;

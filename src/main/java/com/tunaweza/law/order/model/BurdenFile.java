@@ -13,9 +13,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.util.Date;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import com.tunaweza.law.order.service.EntityModel;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -25,8 +26,8 @@ import lombok.Setter;
 @Table(name="BurdenFile")
 @Getter
 @Setter
-@AllArgsConstructor
-public class BurdenFile {
+@NoArgsConstructor
+public class BurdenFile implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
@@ -34,7 +35,7 @@ public class BurdenFile {
     /*
     * take value gulty or acquitted
     */
-    private String status ;
+    private String statusOfFolder ;
     /*
     * take value finished, pending or in process
     */

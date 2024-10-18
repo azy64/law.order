@@ -13,9 +13,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.util.Date;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import com.tunaweza.law.order.service.EntityModel;
+import lombok.NoArgsConstructor;
 
 
 /**
@@ -26,8 +27,8 @@ import lombok.Setter;
 @Table(name="Judge")
 @Getter
 @Setter
-@AllArgsConstructor
-public class Judge {
+@NoArgsConstructor
+public class Judge implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long Id;
