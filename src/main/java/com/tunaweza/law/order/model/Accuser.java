@@ -17,6 +17,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
+import service.EntityModel;
 
 /**
  *
@@ -27,7 +28,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Accuser {
+public class Accuser implements EntityModel {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int Id;

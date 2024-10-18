@@ -17,17 +17,18 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
+import service.EntityModel;
 
 /**
  *
  * @author azaria
  */
 @Entity
-@Table(name="CulpritDefender˘3")
+@Table(name="CulpritDefender")
 @Getter
 @Setter
 @AllArgsConstructor
-public class CulpritDefender {
+public class CulpritDefender implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int Id;

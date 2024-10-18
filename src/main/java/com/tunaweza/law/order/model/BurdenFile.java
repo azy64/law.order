@@ -16,6 +16,7 @@ import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import service.EntityModel;
 
 /**
  *
@@ -26,7 +27,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class BurdenFile {
+public class BurdenFile implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
@@ -34,7 +35,7 @@ public class BurdenFile {
     /*
     * take value gulty or acquitted
     */
-    private String status ;
+    private String statusOfFolder ;
     /*
     * take value finished, pending or in process
     */

@@ -16,6 +16,7 @@ import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import service.EntityModel;
 
 
 /**
@@ -27,7 +28,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Judge {
+public class Judge implements EntityModel{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long Id;
