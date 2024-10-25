@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class SpecialisationService implements EntityService {
+public class SpecialisationService implements SpecialisationServiceInterface {
     @Autowired
     private final SpecialisationRepository specialisationRepository;
 
@@ -28,15 +28,15 @@ public class SpecialisationService implements EntityService {
     }
 
     @Override
-    public Specialisation create(Specialisation entity) {
-        specialisationRepository.save(entity);
-        return entity;
+    public Specialisation create(Specialisation specialisation) {
+        specialisationRepository.save(specialisation);
+        return specialisation;
     }
 
     @Override
     public Specialisation update(int id, Specialisation entity) {
         Specialisation spec =(Specialisation)entity;
-        Specialisation target = specialisationRepository.findById(id).get();
+        Specialisation target = (Specialisation) specialisationRepository.findById(id).get();
         target.setLibelle(spec.getLibelle());
         target.setCreatedAt(spec.getCreatedAt());
         specialisationRepository.save(target);
@@ -45,8 +45,14 @@ public class SpecialisationService implements EntityService {
 
     @Override
     public Specialisation delete(int id) {
-        Specialisation target = specialisationRepository.findById(id).get();
+        Specialisation target = (Specialisation) specialisationRepository.findById(id).get();
         specialisationRepository.delete(target);
+        return target;
+    }
+
+    @Override
+    public Specialisation getOne(int id) {
+        Specialisation target = (Specialisation) specialisationRepository.findById(id).get();
         return target;
     }
     

@@ -12,11 +12,12 @@ import java.util.List;
  * @author azaria
  */
 
-public interface EntityService {
+public interface SpecialisationServiceInterface {
     
     public List<Specialisation> read();
+    public Specialisation getOne(int id);
     public Specialisation create(Specialisation entity);
-    public Specialisation update(int id, Specialisation entity);
+    public Specialisation update(int id, Specialisation specialisation);
     public Specialisation delete(int id);
     
 }

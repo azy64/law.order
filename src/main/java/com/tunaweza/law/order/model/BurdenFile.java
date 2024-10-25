@@ -15,7 +15,6 @@ import jakarta.persistence.Table;
 import java.util.Date;
 import lombok.Getter;
 import lombok.Setter;
-import com.tunaweza.law.order.service.EntityModel;
 import lombok.NoArgsConstructor;
 
 /**
@@ -27,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @Setter
 @NoArgsConstructor
-public class BurdenFile implements EntityModel{
+public class BurdenFile{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
