@@ -5,7 +5,7 @@
 package com.tunaweza.law.order.controller;
 
 import com.tunaweza.law.order.model.Specialisation;
-import com.tunaweza.law.order.service.EntityService;
+import com.tunaweza.law.order.service.SpecialisationServiceInterface;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,13 +30,17 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class SpecialisationController {
     //
-    private final EntityService specialisationService;
+    private final SpecialisationServiceInterface specialisationService;
     
     @GetMapping("/")
     public String index(){
         return "Je suis la page Acceuil";
     }
     
+    @GetMapping("/read/{id}")
+    public Specialisation getOne(@PathVariable int id){
+        return specialisationService.getOne(id);
+    }
     
     @PostMapping("/save")
     public Specialisation add(@RequestBody Specialisation specialisation){
