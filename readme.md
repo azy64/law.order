@@ -23,6 +23,5 @@ Checking
     - ``` select user from mysql.user; ```
 
 6. ``` docker exec -ti laworder_server-web_1 bash /home/law/apt-install.sh ```
-7. ``` mvn spring-boot:run ```
 
-8. Go to your host browser and type: http://localhost:8000/law/specialisation/, it should display: "Je suis la page Acceuil" 
+7. Go to your host browser and type: http://localhost:8000/law/specialisation/, it should display: "Je suis la page Acceuil" 
