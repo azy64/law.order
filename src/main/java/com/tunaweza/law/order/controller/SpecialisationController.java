@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -33,7 +34,7 @@ public class SpecialisationController {
     private final SpecialisationServiceInterface specialisationService;
     
     @GetMapping("/")
-    public String index(){
+    public @ResponseBody String index(){
         return "Je suis la page Acceuil";
     }
     
@@ -42,7 +43,7 @@ public class SpecialisationController {
         return specialisationService.getOne(id);
     }
     
-    @PostMapping("/save")
+    @PostMapping("/save/")
     public Specialisation add(@RequestBody Specialisation specialisation){
         specialisationService.create(specialisation);
         return specialisation;

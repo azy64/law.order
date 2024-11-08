@@ -4,17 +4,17 @@
  */
 package com.tunaweza.law.order.service;
 
-import com.tunaweza.law.order.model.Judge;
+import com.tunaweza.law.order.model.Accuser;
 import java.util.List;
 
 /**
  *
  * @author azaria
  */
-public interface JudgeServiceInterface {
-    public List<Judge> read();
-    public Judge getOne(int id);
-    public Judge create(Judge judge);
-    public Judge update(int id, Judge judge);
-    public Judge delete(int id);
+public interface AccuserServiceInterface {
+    public List<Accuser> read();
+    public Accuser getOne(int id);
+    public Accuser create(Accuser accuser);
+    public Accuser update(int id, Accuser accuser);
+    public Accuser delete(int id);
 }
