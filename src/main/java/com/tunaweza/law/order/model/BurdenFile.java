@@ -57,6 +57,7 @@ public class BurdenFile{
     @JoinColumn(name="culprit_id")
     private Culprit culprit;
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="judge_id",nullable = false)
     private Judge judge;
     
 }
