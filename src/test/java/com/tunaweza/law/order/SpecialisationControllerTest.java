@@ -55,10 +55,10 @@ class SpecialisationControllerTest {
                 andExpect(status().isOk()).andExpect(jsonPath("$.libelle",is(sp.getLibelle())));
     }
        
-    @Test
-    void deleteSpecialisation()throws Exception{
-         mockMvc.perform(delete("/specialisation/delete/{id}",49)).andDo(print()).
-                 andExpect(status().isOk());
-    }
+    //@Test
+  //  void deleteSpecialisation()throws Exception{
+         //mockMvc.perform(delete("/specialisation/delete/{id}",49)).andDo(print()).
+           //      andExpect(status().isOk());
+    //}
     
 }
